@@ -19,12 +19,12 @@ class Manage
     //echo $class . '<br>';
     $path = 'controllers/' . str_replace('\\','/', $class) . '.php';
     //echo $path . '<br>';
-    if (is_file($path)
+    if (is_file($path))
     {
       include $path;
       return;
     }
-  ]
+  }
   
   public static function resources($class)
   {
@@ -54,6 +54,7 @@ class Manage
 }
 
 spl_autoload_register(array('Manage', 'core'));
+spl_autoload_register(array('Manage', 'controllers'));
 spl_autoload_register(array('Manage', 'resources'));
 spl_autoload_register(array('Manage', 'routes'));
 ?>
