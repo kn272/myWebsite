@@ -14,6 +14,18 @@ class Manage
     }
   }
   
+  public static function controllers($class)
+  {
+    //echo $class . '<br>';
+    $path = 'controllers/' . str_replace('\\','/', $class) . '.php';
+    //echo $path . '<br>';
+    if (is_file($path)
+    {
+      include $path;
+      return;
+    }
+  ]
+  
   public static function resources($class)
   {
     //echo $class . '<br>';
