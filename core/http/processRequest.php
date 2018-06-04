@@ -6,7 +6,7 @@ class processRequest
   public static function createResponse()
   {
     $requested_route = processRequest::getRequestedRoute();
-    print_r($requested_route);
+    //print_r($requested_route);
     $controller_name = $requested_route->controller;
     $controller_method = $requested_route->method;
     $controller_name::$controller_method();
